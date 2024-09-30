@@ -28,13 +28,13 @@ class ServiceCalculatorTest {
     @Test
     @DisplayName("Выброс ошибки")
     void getSumma1() {
-        assertThatExceptionOfType(NullPointerException.class).
+        assertThatExceptionOfType(IllegalArgumentException.class).
                 isThrownBy(() -> calculatorService.getSumma(4, null));
     }
 
 
     @Test
-    @DisplayName("Корректная разность  2х параметров")
+    @DisplayName("Корректная разность 2х параметров")
     void getMinus() {
         int a = 5;
         int b = 4;
@@ -46,7 +46,7 @@ class ServiceCalculatorTest {
     @Test
     @DisplayName("Выброс ошибки")
     void getMinus1() {
-        assertThatExceptionOfType(NullPointerException.class).
+        assertThatExceptionOfType(  IllegalArgumentException.class).
                 isThrownBy(() -> calculatorService.getMinus(4, null));
     }
 
@@ -63,7 +63,7 @@ class ServiceCalculatorTest {
     @Test
     @DisplayName("Выброс ошибки")
     void getMultiply1() {
-        assertThatExceptionOfType(NullPointerException.class).////fdfddfdfdf
+        assertThatExceptionOfType(IllegalArgumentException.class).////fdfddfdfdf
                 isThrownBy(() -> calculatorService.getMultiply(4, null));
     }
 
@@ -79,7 +79,7 @@ class ServiceCalculatorTest {
     @Test
     @DisplayName("Выброс ошибки")
     void getDivide1() {
-        assertThatExceptionOfType(NullPointerException.class).
+        assertThatExceptionOfType(IllegalArgumentException.class).
                 isThrownBy(() -> calculatorService.getDivide(4, null));
     }
 

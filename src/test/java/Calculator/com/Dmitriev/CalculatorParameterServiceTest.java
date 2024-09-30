@@ -14,7 +14,7 @@ class CalculatorParameterServiceTest {
 
     @ParameterizedTest
     @CsvSource(value = {"3,4", "0,0", "-1,-3", "0,-1"})
-    void getSummaParameter(int a, int b) {
+    void getSummaParameter (int a, int b) {
         int result = a + b;
         int actual = calculatorService.getSumma(a, b);
         assertEquals(result, actual);

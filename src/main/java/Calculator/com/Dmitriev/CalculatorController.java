@@ -25,40 +25,22 @@ public class CalculatorController {
 
     @GetMapping("/plus")
     public String getSumma(Integer a, Integer b) {
-        if (a == null || b == null) {
-            return "Параметр не передан!";
-        }
-        return (a + "+" + b + "=" + (a + b));
+        return (a + "+" + b + "=" + (a+b));
     }
 
     @GetMapping("/minus")
-    public String GetMinus(Integer a, Integer b)  {
-        if (a == null || b == null) {
-            throw new NullPointerException("Параметр равен null!!!");
-        }
-        return (a + "-" + b + "=" + (a - b));
+    public String GetMinus(Integer a, Integer b) {
+        return (a + "-" + b + "=" + (a-b));
     }
 
     @GetMapping("/multiply")
-    public String getMultiply(Integer a, Integer b)  {
-        if (a == null || b == null) {
-            throw new NullPointerException("Параметр равен null!!!");
-        }
-        return (a + "*" + b + "=" + a * b);
+    public String getMultiply(Integer a, Integer b) {
+        return (a + "*" + b + "=" + (a*b));
     }
 
     @GetMapping("/divide")
-    public String getDivide(Integer a, Integer b)  {
-        if (a == null || b == null) {
-            throw new NullPointerException("Параметр равен null!!!");
-        }
-        if (b == 0) {
-            throw new IllegalArgumentException("Деление на 0  запрещенио!!!");
-        }
-        return (a + "/" + b + "=" + a / b);
+    public String getDivide (Integer a, Integer b) {
+        return (a + "/" + b + "=" + (a/b));
+
     }
-
-
-
-
 }
