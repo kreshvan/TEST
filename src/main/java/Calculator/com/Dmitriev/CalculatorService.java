@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 @Component
 public class CalculatorService {
 
-
     public String Hello() {
         return "Добро пожаловать в калькулятор!";
     }

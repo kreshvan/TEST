@@ -10,12 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/calculator")
 public class CalculatorController {
+
     private final CalculatorService calculatorService;
 
     public CalculatorController(CalculatorService calculatorService) {
-
         this.calculatorService = calculatorService;
     }
+
 
     @GetMapping()
     public String Hello() {
@@ -31,28 +32,28 @@ public class CalculatorController {
     }
 
     @GetMapping("/minus")
-    public String GetMinus(Integer a, Integer b) throws IllegalArgumentException {
+    public String GetMinus(Integer a, Integer b)  {
         if (a == null || b == null) {
-            throw new IllegalArgumentException("Параметр равен null!!!");
+            throw new NullPointerException("Параметр равен null!!!");
         }
         return (a + "-" + b + "=" + (a - b));
     }
 
     @GetMapping("/multiply")
-    public String getMultiply(Integer a, Integer b) throws IllegalArgumentException {
+    public String getMultiply(Integer a, Integer b)  {
         if (a == null || b == null) {
-            throw new IllegalArgumentException("Параметр равен null!!!");
+            throw new NullPointerException("Параметр равен null!!!");
         }
         return (a + "*" + b + "=" + a * b);
     }
 
     @GetMapping("/divide")
-    public String getDivide(Integer a, Integer b) throws IllegalArgumentException {
+    public String getDivide(Integer a, Integer b)  {
         if (a == null || b == null) {
-            throw new IllegalArgumentException("Параметр равен null!!!");
+            throw new NullPointerException("Параметр равен null!!!");
         }
         if (b == 0) {
-            throw new IllegalArgumentException("Деление на 0 запрещено!!!");
+            throw new IllegalArgumentException("Деление на 0  запрещенио!!!");
         }
         return (a + "/" + b + "=" + a / b);
     }
