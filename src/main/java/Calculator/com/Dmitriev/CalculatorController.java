@@ -24,27 +24,27 @@ public class CalculatorController {
     }
 
     @GetMapping("/plus")
-    public String GetSumma (Integer a, Integer b) {
-        int result =  calculatorService.getSumma(a, b);
-        return (a + "+" + b + "=" + (a+b));
+    public String getSumma(Integer a, Integer b) {
+        int result = calculatorService.getSumma(a, b);
+        return (a + "+" + b + "=" + result);
     }
 
     @GetMapping("/minus")
-    public String GetMinus(Integer a, Integer b) {
-        int result =  calculatorService.getMinus(a, b);
-        return (a + "-" + b + "=" + (a-b));
+    public String getMinus(Integer a, Integer b) {
+        int result = calculatorService.getMinus(a, b);
+        return (a + "-" + b + "=" + result);
     }
 
     @GetMapping("/multiply")
-    public String getMultiply (Integer a, Integer b) {
-        int result =  calculatorService.getMultiply(a, b);
-        return (a + "*" + b + "=" + (a*b));
+    public String getMultiply(Integer a, Integer b) {
+        int result = calculatorService.getMultiply(a, b);
+        return (a + "*" + b + "=" + result);
     }
 
     @GetMapping("/divide")
-    public String getDivide (Integer a, Integer b) {
-        int result =  calculatorService.getDivide(a, b);
-        return (a + "/" + b + "=" + (a/b));
+    public String getDivide(Integer a, Integer b) {
+        int result = calculatorService.getDivide(a, b);
+        return (a + "/" + b + "=" + result);
 
     }
 }

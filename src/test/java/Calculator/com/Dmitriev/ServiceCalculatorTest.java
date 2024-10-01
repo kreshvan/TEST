@@ -46,7 +46,7 @@ class ServiceCalculatorTest {
     @Test
     @DisplayName("Выброс ошибки")
     void getMinus1() {
-        assertThatExceptionOfType(  IllegalArgumentException.class).
+        assertThatExceptionOfType(IllegalArgumentException.class).
                 isThrownBy(() -> calculatorService.getMinus(4, null));
     }
 
@@ -56,7 +56,7 @@ class ServiceCalculatorTest {
         int a = nextInt();
         int b = nextInt();
         int result = a * b;
-       int actual = calculatorService.getMultiply(a, b);
+        int actual = calculatorService.getMultiply(a, b);
         assertEquals(result, actual);
     }
 

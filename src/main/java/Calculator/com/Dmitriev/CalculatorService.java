@@ -16,38 +16,38 @@ public class CalculatorService {
 
     public int getSumma(Integer a, Integer b) {
         if (a == null || b == null) {
-            throw new  IllegalArgumentException ( "Параметр не передан!");
+            throw new IllegalArgumentException("Параметр не передан!");
         }
-        return a+b;
+        return a + b;
 
 
     }
 
     public int getMinus(Integer a, Integer b) {
         if (a == null || b == null) {
-            throw new IllegalArgumentException ("Параметр равен null!!!");
+            throw new IllegalArgumentException("Параметр равен null!!!");
         }
-        return (a-b);
+        return (a - b);
     }
 
 
-    public int getMultiply(Integer a, Integer b)  {
+    public int getMultiply(Integer a, Integer b) {
         if (a == null || b == null) {
             throw new IllegalArgumentException("Параметр равен null!!!");
         }
-        return a*b;
+        return a * b;
     }
 
 
     public int getDivide(Integer a, Integer b) {
 
         if (a == null || b == null) {
-            throw new IllegalArgumentException ("Параметр равен null!!!");
+            throw new IllegalArgumentException("Параметр равен null!!!");
         }
         if (b == 0) {
             throw new IllegalArgumentException("Деление на 0  запрещенио!!!");
         }
-         return a/b;
+        return a / b;
     }
 
 }

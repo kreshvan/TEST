@@ -6,8 +6,8 @@ public class IllegalArgumentException extends RuntimeException {
         super("Деление на 0 запрещено!!!");
     }
 
-    public IllegalArgumentException (String sms) {
-super(sms);
+    public IllegalArgumentException(String sms) {
+        super(sms);
     }
 
 }
