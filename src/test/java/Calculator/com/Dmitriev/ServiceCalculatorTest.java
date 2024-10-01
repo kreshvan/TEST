@@ -16,12 +16,12 @@ class ServiceCalculatorTest {
     private final CalculatorService calculatorService = new CalculatorService();
 
     @Test
-    @DisplayName("Корректно складываю 2 параметра")
+    @DisplayName("Корректно складываю  2 параметра")
     void getSumma() {
         int a = nextInt();
         int b = nextInt();
         int result = a + b;
-        int actual = calculatorService.getSumma(a, b);
+        Object actual = (calculatorService.getSumma(a, b));
         assertEquals(result, actual);
     }
 
@@ -39,7 +39,7 @@ class ServiceCalculatorTest {
         int a = 5;
         int b = 4;
         int result = a - b;
-        int actual = calculatorService.getMinus(a, b);
+        Object actual = (calculatorService.getMinus(a, b));
         assertEquals(result, actual);
     }
 
@@ -56,7 +56,7 @@ class ServiceCalculatorTest {
         int a = nextInt();
         int b = nextInt();
         int result = a * b;
-        int actual = calculatorService.getMultiply(a, b);
+       int actual = calculatorService.getMultiply(a, b);
         assertEquals(result, actual);
     }
 
